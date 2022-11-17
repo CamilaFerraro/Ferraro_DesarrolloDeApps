@@ -1,7 +1,7 @@
 import { StyleSheet, TextInput } from 'react-native'
 import React from 'react'
 
-const input = ({style}) => {
+const input = ({style, ...restProps}) => {
     return( 
       <TextInput
         blurOnSubmit
@@ -9,6 +9,7 @@ const input = ({style}) => {
         autoCorrect={false}
         keyboardType="numeric"
         maxLength={2}
+        {...restProps}
         style={{...styles.input, ...style}}
       />
     )
