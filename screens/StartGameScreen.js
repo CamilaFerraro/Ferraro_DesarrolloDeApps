@@ -2,23 +2,24 @@ import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 import Card from '../components/Card'
 import colors from '../constants/colors'
+import Input from '../components/Input'
 
 const StartGameScreen = () => {
   return (
     <View style={styles.screen}>
         <Card>
             <Text>Elige un numero</Text>
-            <TextInput/>
+            <Input/>
             <View style={styles.buttonContainer}>
                 <Pressable style={styles.cleanButton}>
-                    <Text>Limpiar</Text>
+                    <Text style={{color:"white"}}>Limpiar</Text>
                 </Pressable>
                 <Pressable style={{
                     ...styles.cleanButton, 
                     ...styles.confirmButton,
                     }}
                 >
-                  <Text>Agregar</Text>
+                  <Text style={{color: "white"}}>Confirmar</Text>
                 </Pressable>
             </View>
         </Card>
