@@ -1,10 +1,10 @@
-import { Pressable, StyleSheet, Text, TextInput, TouchableWithoutFeedback, View, Keyboard, Button } from 'react-native'
+import { Pressable, StyleSheet, Text, TouchableWithoutFeedback, View, Keyboard, Button } from 'react-native'
 import React, { useState } from 'react'
 import Card from '../components/Card'
 import colors from '../constants/colors'
 import Input from '../components/Input'
 
-const StartGameScreen = (onStartGame) => {
+const StartGameScreen = ({onStartGame}) => {
 const [value, setValue] = useState("");
 const [confirmed, setConfirmed] = useState(false);
 const [selectedNumber, setSelectedNumber] = useState("");
@@ -13,18 +13,18 @@ const handleConfirmation = () => {
     const choseNumber = parseInt(value)
     if (choseNumber === NaN || choseNumber <= 0 || choseNumber>99) return;
 
-    setConfirmed(true)
-    setSelectedNumber(choseNumber)
-    setValue("")
-}
+    setConfirmed(true);
+    setSelectedNumber(choseNumber);
+    setValue("");
+};
 
 const handleResetInput = () => {
-    setValue("")
+    setValue("");
     setConfirmed(false);
 };
 
 const handleInput = (text) => {
-    setValue(text.replace(/[^0-9]/g,""))
+    setValue(text.replace(/[^0-9]/g,""));
 };
 
 

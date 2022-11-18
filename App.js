@@ -16,7 +16,7 @@ export default function App() {
     setUserNumber(selectedNumber);
   };
 
-  let content = <StartGameScreen onStartGame={handleStartGame}/>
+  let content = <StartGameScreen onStartGame={handleStartGame}/>;
 
   if (userNumber) {
     content=<GameScreen/>
