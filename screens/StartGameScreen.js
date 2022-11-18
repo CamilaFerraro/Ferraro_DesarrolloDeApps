@@ -1,10 +1,10 @@
-import { Pressable, StyleSheet, Text, TextInput, TouchableWithoutFeedback, View, Keyboard } from 'react-native'
+import { Pressable, StyleSheet, Text, TextInput, TouchableWithoutFeedback, View, Keyboard, Button } from 'react-native'
 import React, { useState } from 'react'
 import Card from '../components/Card'
 import colors from '../constants/colors'
 import Input from '../components/Input'
 
-const StartGameScreen = () => {
+const StartGameScreen = (onStartGame) => {
 const [value, setValue] = useState("");
 const [confirmed, setConfirmed] = useState(false);
 const [selectedNumber, setSelectedNumber] = useState("");
@@ -12,7 +12,7 @@ const [selectedNumber, setSelectedNumber] = useState("");
 const handleConfirmation = () => {
     const choseNumber = parseInt(value)
     if (choseNumber === NaN || choseNumber <= 0 || choseNumber>99) return;
-     
+
     setConfirmed(true)
     setSelectedNumber(choseNumber)
     setValue("")
@@ -48,6 +48,13 @@ const handleInput = (text) => {
                     </Pressable>
                 </View>
             </Card>
+            {confirmed && (
+                <Card newStyles={{marginTop: 50, width: 150}}>
+                    <Text>Tu Numero</Text>
+                    <Text>{selectedNumber}</Text>
+                    <Button title="Empezar juego" onPress={()=> onStartGame(selectedNumber)}/>
+                </Card>
+            )};
         </View>
     </TouchableWithoutFeedback>
   )
