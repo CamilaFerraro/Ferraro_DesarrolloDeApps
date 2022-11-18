@@ -7,16 +7,16 @@ import { useFonts } from 'expo-font';
 
 export default function App() {
   const [loaded] = useFonts({
-    Poppins: require('./assets/fonts/Poppins-Medium')
+    Poppins: require('./assets/fonts/Poppins-Medium.ttf')
   })
 
   const [userNumber, setUserNumber] = useState();
 
-  const handlestartGame = (selectedNumber) => {
+  const handleStartGame = (selectedNumber) => {
     setUserNumber(selectedNumber);
   };
 
-  let content = <StartGameScreen onStartGame={handlestartGame}/>
+  let content = <StartGameScreen onStartGame={handleStartGame}/>
 
   if (userNumber) {
     content=<GameScreen/>
