@@ -5,27 +5,27 @@ import colors from '../constants/colors'
 import Input from '../components/Input'
 
 const StartGameScreen = ({onStartGame}) => {
-const [value, setValue] = useState("");
-const [confirmed, setConfirmed] = useState(false);
-const [selectedNumber, setSelectedNumber] = useState("");
+  const [value, setValue] = useState("");
+  const [confirmed, setConfirmed] = useState(false);
+  const [selectedNumber, setSelectedNumber] = useState("");
 
-const handleConfirmation = () => {
-    const choseNumber = parseInt(value)
-    if (choseNumber === NaN || choseNumber <= 0 || choseNumber>99) return;
+  const handleConfirmation = () => {
+    const choseNumber = parseInt(value);
+    if (choseNumber === NaN || choseNumber <= 0 || choseNumber > 99) return;
 
     setConfirmed(true);
     setSelectedNumber(choseNumber);
     setValue("");
-};
+  };
 
-const handleResetInput = () => {
+  const handleResetInput = () => {
     setValue("");
     setConfirmed(false);
-};
+  };
 
-const handleInput = (text) => {
-    setValue(text.replace(/[^0-9]/g,""));
-};
+  const handleInput = (text) => {
+    setValue(text.replace(/[^0-9]/g, ""));
+  };
 
 
   return (
@@ -60,7 +60,7 @@ const handleInput = (text) => {
   )
 }
 
-export default StartGameScreen
+export default StartGameScreen;
 
 const styles = StyleSheet.create({
     screen:{

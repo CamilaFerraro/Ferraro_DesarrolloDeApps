@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import Header from './components/Header';
 import GameScreen from './screens/GameScreen';
 import StartGameScreen from './screens/StartGameScreen';
@@ -19,7 +19,7 @@ export default function App() {
   let content = <StartGameScreen onStartGame={handleStartGame}/>;
 
   if (userNumber) {
-    content=<GameScreen/>
+    content=<GameScreen/>;
   }
 
   if (!loaded) {
