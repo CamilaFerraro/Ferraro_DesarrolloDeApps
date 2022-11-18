@@ -4,11 +4,11 @@ import Card from '../components/Card'
 
 const GameScreen = () => {
 
-  const [currentGuess, setCurrentGuess] = useState(12);
+  const [currentGuess, setCurrentGuess] = useState();
 
-  const generateRandom = () => {
-    return Math.random()
-  };
+  useEffect(() => {
+    setCurrentGuess(Math.floor(Math.random() * (100 - 1) + 1));
+  }, []);
 
   return (
     <View style={styles.coontainer}>
