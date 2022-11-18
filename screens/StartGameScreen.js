@@ -33,11 +33,11 @@ const StartGameScreen = ({onStartGame}) => {
     <TouchableWithoutFeedback onPress={()=>Keyboard.dismiss()}>
         <View style={styles.screen}>
             <Card>
-                <Text>Elige un número</Text>
+                <Text>Choose a Number</Text>
                 <Input value={value} onChangeText={handleInput}/>
                 <View style={styles.buttonContainer}>
                     <Pressable style={styles.cleanButton} onPress={handleResetInput}>
-                        <Text style={{color:"white"}}>Limpiar</Text>
+                        <Text style={{color:"white"}}>Clean</Text>
                     </Pressable>
                     <Pressable style={{
                         ...styles.cleanButton, 
@@ -45,15 +45,15 @@ const StartGameScreen = ({onStartGame}) => {
                         }}
                         onPress={handleConfirmation}
                     >
-                      <Text style={{color: "white"}}>Confirmar</Text>
+                      <Text style={{color: "white"}}>Confirm</Text>
                     </Pressable>
                 </View>
             </Card>
             {confirmed && (
                 <Card newStyles={{marginTop: 50, width: 150}}>
-                    <Text>Tu Número</Text>
+                    <Text>Your Number</Text>
                     <Text>{selectedNumber}</Text>
-                    <Button title="Empezar juego" onPress={()=> onStartGame(selectedNumber)}/>
+                    <Button title="Start Game" onPress={()=> onStartGame(selectedNumber)}/>
                 </Card>
             )}
         </View>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
 
     },
     confirmButton:{
-        backgroundColor: colors.primary,
+        backgroundColor: colors.confirm,
         width: 80,
     }
 })

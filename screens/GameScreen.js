@@ -12,11 +12,11 @@ const GameScreen = () => {
 
   return (
     <View style={styles.coontainer}>
-      <Text>La suposicion del oponente</Text>
+      <Text>Oponent's Guess</Text>
       <Text>{currentGuess}</Text>
       <Card newStyles={styles.buttonContainer}>
-        <Button title="Menor"/>
-        <Button title="Mayor"/>
+        <Button title="Higher"/>
+        <Button title="Smaller"/>
       </Card>
     </View>
   );
