@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
 import React, { useState } from 'react'
-import Card from '../components/Card'
+import Card from '../components/Card';
 
 const GameScreen = () => {
 
