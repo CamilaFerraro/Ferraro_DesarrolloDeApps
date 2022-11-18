@@ -32,7 +32,7 @@ const StartGameScreen = ({onStartGame}) => {
     <TouchableWithoutFeedback onPress={()=>Keyboard.dismiss()}>
         <View style={styles.screen}>
             <Card>
-                <Text>Elige un numero</Text>
+                <Text>Elige un número</Text>
                 <Input value={value} onChangeText={handleInput}/>
                 <View style={styles.buttonContainer}>
                     <Pressable style={styles.cleanButton} onPress={handleResetInput}>
@@ -54,7 +54,7 @@ const StartGameScreen = ({onStartGame}) => {
                     <Text>{selectedNumber}</Text>
                     <Button title="Empezar juego" onPress={()=> onStartGame(selectedNumber)}/>
                 </Card>
-            )};
+            )}
         </View>
     </TouchableWithoutFeedback>
   )

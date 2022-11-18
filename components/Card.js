@@ -1,7 +1,9 @@
-import { StyleSheet, View, Text} from "react-native";
+import { StyleSheet, View, Dimensions } from "react-native";
 import React from "react";
 
-const Card = ({children, newStyles}) => {
+const width = Dimensions.get('window').width
+
+const Card = ({ children, newStyles }) => {
   return (
     <View style={{ ...styles.inputContainer, ...newStyles }}>{children}</View>
   );

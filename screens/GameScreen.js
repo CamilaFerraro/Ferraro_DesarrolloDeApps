@@ -26,15 +26,15 @@ export default GameScreen;
 
 const styles = StyleSheet.create({
     coontainer:{
-        flex: 1,
-        padding: 10,
-        alignItems: "center",
+      flex: 1,
+      padding: 10,
+      alignItems: "center",
     },
     buttonContainer:{
-        flexDirection: "row",
-        justifyContent: "space-between",
-        marginTop: 20,
-        width: 300,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      marginTop: 20,
+      width: 300,
     }
 
 })

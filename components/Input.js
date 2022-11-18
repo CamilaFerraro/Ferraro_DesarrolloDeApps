@@ -5,7 +5,7 @@ const input = ({style, ...restProps}) => {
     return( 
       <TextInput
         blurOnSubmit
-        autoCapitalization='none'
+        autoCapitalization="none"
         autoCorrect={false}
         keyboardType="numeric"
         maxLength={2}
