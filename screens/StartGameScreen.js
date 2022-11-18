@@ -24,6 +24,7 @@ const StartGameScreen = ({onStartGame}) => {
   };
 
   const handleInput = (text) => {
+    console.log(text);
     setValue(text.replace(/[^0-9]/g, ""));
   };
 
@@ -50,7 +51,7 @@ const StartGameScreen = ({onStartGame}) => {
             </Card>
             {confirmed && (
                 <Card newStyles={{marginTop: 50, width: 150}}>
-                    <Text>Tu Numero</Text>
+                    <Text>Tu Número</Text>
                     <Text>{selectedNumber}</Text>
                     <Button title="Empezar juego" onPress={()=> onStartGame(selectedNumber)}/>
                 </Card>

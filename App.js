@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Header title={"Adivina el numero"} newStyles={{fontFamily: 'Poppins'}}/>
+      <Header title={"Adivina el número"} newStyles={{fontFamily: 'Poppins'}}/>
       {content}
     </View>
   );
