@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         width: 70,
         justifyContent:'center',
         alignItems:'center',
-        borderRadius:10,
+        borderRadius: 10,
 
     },
     confirmButton:{

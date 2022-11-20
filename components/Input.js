@@ -2,18 +2,18 @@ import { StyleSheet, TextInput } from 'react-native';
 import React from 'react';
 
 const input = ({style, ...restProps}) => {
-    return( 
-      <TextInput
-        blurOnSubmit
-        autoCapitalization="none"
-        autoCorrect={false}
-        keyboardType="numeric"
-        maxLength={2}
-        {...restProps}
-        style={{...styles.input, ...style}}
-        {...restProps}
-      />
-    );
+  return( 
+    <TextInput
+      blurOnSubmit
+      autoCapitalization="none"
+      autoCorrect={false}
+      keyboardType="numeric"
+      maxLength={2}
+      {...restProps}
+      style={{...styles.input, ...style}}
+      {...restProps}
+    />
+  );
 };
 
 export default input;
