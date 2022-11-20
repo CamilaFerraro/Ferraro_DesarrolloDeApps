@@ -50,7 +50,7 @@ const StartGameScreen = ({onStartGame}) => {
                 </View>
             </Card>
             {confirmed && (
-                <Card newStyles={{marginTop: 50, width: 150}}>
+                <Card newStyles={{marginTop: 20, width: 150}}>
                     <Text>Your Number</Text>
                     <Text>{selectedNumber}</Text>
                     <Button title="Start Game" onPress={()=> onStartGame(selectedNumber)}/>

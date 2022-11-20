@@ -21,8 +21,7 @@ export default function App() {
 
   const handleFinishGame = (selection, number) => {
     if (
-      (selection === "lower" && userNumber < number) ||
-      (selection === "greater" && userNumber > number)
+      (selection === "lower" && userNumber < number) || (selection === "greater" && userNumber > number)
     ) {
       setResult("win");
     } else {

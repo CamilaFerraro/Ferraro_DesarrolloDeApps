@@ -24,7 +24,7 @@ const ResultScreen = ({ result }) => {
       <Card>
         <Text>{`you ${result}`}</Text>
       </Card>
-      <Image style={styles.imageContainer} source={image} />
+      <Image style={styles.imageContainer} source={image}/>
     </View>
   );
 };
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     height: 320,
     width: 320,
-    margin: 10,
+    borderRadius: 10,
+    marginTop: 6.2,
   },
 });
